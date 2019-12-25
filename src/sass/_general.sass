@@ -1,12 +1,13 @@
 header
 	position: relative
+	height: 50px
 
 nav
 	position: fixed
-	height: 51px
-	background-color: #212121
 	width: 100%
-	z-index: 10
+	height: 50px
+	background-color: #212121
+	z-index: 5
 
 .hamburger
 	display: none
@@ -18,106 +19,95 @@ nav
 	margin: 0
 	list-style-type: none
 	&_link
-		color: #fff
+		color: #ffffff
 		font-size: 15px
 		font-weight: 300
-
-.menu_item
-	border-right: 2px dotted black
-	padding-right: 28px
-
-	&:nth-child(6)
-		border: none
+		&:hover
+			text-decoration: none
+			color: $main-color
+	&_item
+		border-right: 2px dotted black
+		padding-right: 28px
+		&:last-child
+			border-right: none
 
 .subheader
 	position: absolute
+	top: 50px
 	width: 100%
 	height: 84px
 	background-color: rgba(0, 0, 0, 0.6)
-	top: 51px
-	z-index: 1
-
 	&_logo
-		max-width: 100%
 		display: block
+		max-width: 100%
 		margin-top: 16px
-
 	&_official
-		color: #fff
+		margin-top: 6px
+		opacity: 0.5
+		color: #ffffff
 		font-size: 13px
 		font-weight: 400
-		opacity: 0.5
-		margin-top: 6px
-
 	&_call
-		color: #fff
+		color: #ffffff
 		font-size: 12px
 		font-weight: 300
 		margin-top: 19px
 		text-align: right
-
 	&_phone
 		display: block
+		margin-top: 8px
+		color: #ffffff
+		font-size: 22px
+		font-weight: 400
 		text-transform: uppercase
 		text-align: right
 		line-height: 12px
-		color: #fff
-		font-size: 22px
-		font-weight: 400
-		margin-top: 8px
-
+		&:hover
+			text-decoration: none
+			color: #fff
 	&_btn
+		margin-top: 19px
 		width: 172px
 		height: 46px
-		box-shadow: inset 0 -3 0 rgba(0, 0, 0, 0.12)
+		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
 		border: none
-		margin-top: 19px
-		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
-		color: #fff
-		font-size: 14px
-		font-weight: 68px
-		text-transform: uppercase
 		border-radius: 4px
-		-webkit-border-radius: 4px
-		-moz-border-radius: 4px
-		-ms-border-radius: 4px
-		-o-border-radius: 4px
+		background-image: linear-gradient(to top, $main-color 0%, #4ce2ff 100%)
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+		color: #ffffff
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
 		+btn_hover
 
 .promo
-	position: relative
 	min-height: 800px
-	background: url('../img/bg/mainBg.jpg') center (center / cover) no-repeat
-	padding: 193px 0 135px 0
-	z-index: 0
-
+	background: url('../img/bg/main_bg.jpg') center (center / cover) no-repeat
+	padding: 150px 0 135px 0
 	&_header
-		color: #fff
+		color: #ffffff
+		font-weight: 700
+		text-transform: uppercase
 		font-size: 60px
-		font-weight: 700
-		text-transform: uppercase
 		line-height: 60px
-		text-align: center
 		margin: 0
-
+		text-align: center
 	&_subheader
-		color: #fff
-		font-size: 36px
+		color: #ffffff
 		font-weight: 700
 		text-transform: uppercase
+		font-size: 36px
 		line-height: 36px
 		margin: 0
 		margin-top: 22px
 		text-align: center
-
 	&_descr
-		color: #fff
+		color: #ffffff
 		font-size: 18px
 		font-weight: 400
 		line-height: 24px
 		text-align: center
 		margin-top: 23px
-
 	&_btn
 		display: block
 		margin: 118px auto 0 auto
@@ -125,85 +115,92 @@ nav
 		height: 63px
 		box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
 		border: none
-		background-image: linear-gradient(to top, $main-color 0%, #4ce2ff 100%)
 		border-radius: 4px
-		-webkit-border-radius: 4px
-		-moz-border-radius: 4px
-		-ms-border-radius: 4px
-		-o-border-radius: 4px
-		color: #fff
+		background-image: linear-gradient(to top, $main-color 0%, #4ce2ff 100%)
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+		color: #ffffff
 		font-size: 18px
 		font-weight: 400
 		text-transform: uppercase
 		+btn_hover
 
-.advantages
-	padding: 75px 0 65px 0
+.reasons
+	padding: 71px 0 65px 0
+	&_block
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 35px
+	&_round
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 26px
+		width: 113px
+		height: 113px
+		background-color: $main-color
+		border-radius: 100%
+	&_descr
+		width: 343px
+	&_subtitle
+		line-height: 21px
+		color: $main-color
+		font-size: 17px
+		font-weight: 400
+	&_text
+		color: #202020
+		font-size: 15px
+		font-weight: 300
+		line-height: 21px
 
-.button_style
-	padding-top: 5px
-	font-size: 11px
-	color: rgb(255, 255, 255)
-	text-transform: uppercase
-	background-color: rgb(0, 0, 0)
-	width: 112px
-	height: 24px
+.label
+	position: relative
 	margin: 0 auto
-	text-align: center
-
-.header_style
-	margin-top: 36px
-	font-size: 38px
-	color: rgb(34, 34, 34)
-	font-weight: bold
+	height: 24px
+	width: 112px
+	padding: 5px 12px
+	background-color: #000000
+	color: #ffffff
+	font-size: 11px
+	font-weight: 300
 	text-transform: uppercase
 	text-align: center
+	z-index: 2
+	&_white
+		background-color: #fff
+		color: #000
+	&_min
+		width: 76px
 
-.advantages_text
-	font-size: 15px
-	font-weight: 300
-	color: #202020
-	line-height: 1.235
-
-.head_text_advantages
-	font-size: 17px
-	font-weight: 400
-	color: #1eacc7
-
-.blue_round
-	margin-right: 26px
-	background-color: rgb(30, 172, 199)
-	width: 113px
-	height: 113px
-	border-radius: 100%
-	-webkit-border-radius: 100%
-	-moz-border-radius: 100%
-	-ms-border-radius: 100%
-	-o-border-radius: 100%
-	display: flex
-	justify-content: center
-	align-items: center
-	margin-top: 45px
-
-.full_text-container
-	width: 340px
-	margin-top: 35px
-
-.advantages_box
-	display: flex
-	justify-content: center
+.title
+	position: relative
+	margin-bottom: 0
+	margin-top: 38px
+	color: #222222
+	font-size: 38px
+	line-height: 38px
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+	z-index: 2
+	&_white
+		color: #fff
 
 .subtitle
-	color: #222
+	position: relative
+	margin-top: 19px
+	color: #222222
 	font-size: 17px
 	font-weight: 400
 	text-align: center
-	margin-top: 19px
+	z-index: 2
+	&_white
+		color: #fff
 
 .mobile
 	min-height: 864px
 	padding: 48px 0 79px 0
-	background: url('../img/bg/mobile_bg.png') center (center / cover) no-repeat
+	background: url('../img/bg/mobile_app.png') center (center / cover) no-repeat
 	.row
 		margin-top: 32px
 	&_item
@@ -214,22 +211,22 @@ nav
 		margin-bottom: 19px
 		padding-top: 92px
 		&_1
-			background: url('../img/blacktelimg.jpg') center (center / cover) no-repeat
+			background: url('../img/bg/mobile_screen_1.jpg') center (center / cover) no-repeat
 		&_2
-			background: url('../img/blacktelimg1.jpg') center (center / cover) no-repeat
+			background: url('../img/bg/mobile_screen_2.jpg') center (center / cover) no-repeat
 		&_3
-			background: url('../img/blacktelimg2.jpg') center (center / cover) no-repeat
+			background: url('../img/bg/mobile_screen_3.jpg') center (center / cover) no-repeat
 		&_4
-			background: url('../img/blacktelimg3.jpg') center (center / cover) no-repeat
+			background: url('../img/bg/mobile_screen_4.jpg') center (center / cover) no-repeat
 		&_5
-			background: url('../img/blacktelimg4.jpg') center (center / cover) no-repeat
+			background: url('../img/bg/mobile_screen_5.jpg') center (center / cover) no-repeat
 		&_6
-			background: url('../img/blacktelimg5.jpg') center (center / cover) no-repeat
+			background: url('../img/bg/mobile_screen_6.jpg') center (center / cover) no-repeat
 		&_subtitle
 			color: #ffffff
 			font-size: 24px
 			font-weight: 400
-			line-height: 32px
+			line-height: 31px
 			text-transform: uppercase
 			text-align: center
 		&_plus
@@ -242,13 +239,12 @@ nav
 			transform: translateX(-50%)
 			width: 26px
 			height: 26px
+			background-color: #000000
+			margin: 0 auto
 			border-radius: 100%
-			background-color: #000
 			cursor: pointer
-			transition: 0.3s all
 			&:before
 				content: ''
-				position: absolute
 				display: block
 				width: 14px
 				height: 2px
@@ -257,22 +253,24 @@ nav
 			&:after
 				content: ''
 				position: absolute
+				left: 50%
+				transform: translateX(-50%)
 				display: block
-				width: 2px
 				height: 14px
+				width: 2px
 				background-color: $main-color
 				transition: 0.3s all
 			&:hover
-				background-color: #fff
-				&:before,&:after
-					background-color: #ff00c8
+				&:before, &:after
+					background-color: $second-color
+
 .choice
 	position: relative
 	min-height: 895px
 	padding: 57px 0 138px 0
-	background: url('../img/bg/mobile_bg.png') center (center / cover) no-repeat
-	z-index: 1
+	background: url('../img/bg/mobile_app.png') center (center / cover) no-repeat
 	&_img
+		position: relative
 		display: block
 		margin: 56px auto 0 auto
 		z-index: 2
@@ -289,21 +287,13 @@ nav
 		height: 499px
 		width: 100%
 		background-color: #070716
-		z-index: -1
-.label_white
-	color: #000
-	background-color: #fff
-.title_white
-	color: #fff
-
-.subtitle_white
-	color: #fff
+		z-index: 1
 
 .require
 	padding: 68px 0 84px 0
 	&_block
 		margin: 33px 0
-		&_nbm
+		&_nmb
 			margin-bottom: 0px
 	&_title
 		color: #1ca8c3
@@ -318,52 +308,48 @@ nav
 			font-size: 17px
 			font-weight: 300
 			line-height: 24px
-			margin-top: 10px
+			margin-bottom: 10px
 			&:before
 				content: ''
 				display: block
 				position: absolute
 				left: -32px
 				top: 3px
-				// top: 50%
-				// transform: translateY(-50%)
 				width: 21px
 				height: 20px
-				background: url('../icons/plusiconblue.png') center (center / cover) no-repeat
+				background: url('../icons/check_blue.svg') center (center / cover) no-repeat
 	&_descr
+		margin-top: 25px
 		font-size: 17px
-		color: rgb(28, 168, 195)
 		font-weight: 300
+		line-height: 24px
+		color: #1ca8c3
 	.warning
 		.require_title
 			color: $second-color
 		.require_list
-			li:before
-				background: url('../icons/plusiconred.png') center (center / cover) no-repeat
-	.header_style
-		margin-top: 30px
-.city
+			li
+				&:before
+					background: url('../icons/check_red.svg') center (center / cover) no-repeat
+.world
 	position: relative
-	background: url('../img/bg/lastbg.jpg') center (center / cover) no-repeat
-	padding: 50px 0 50px 0
-	min-height: 715px
-	&_subtext
+	min-height: 717px
+	padding: 49px 0
+	background: url('../img/bg/map.jpg') center (center / cover) no-repeat
+	&_link
 		position: absolute
-		top: 90.5%
 		left: 50%
 		transform: translateX(-50%)
+		bottom: 49px
+		text-align: center
+		font-size: 15px
+		font-weight: 400
+		line-height: 68px
 		text-transform: uppercase
-		& a
+		color: #1fbad6
+		&:hover
 			text-decoration: none
-			font-size: 15px
-			color: rgb(31, 186, 214)
-			cursor: pointer
-
-	.header_style
-		margin: 30px 0 0 0
-		line-height: 30px
-	.subtitle
-		margin-top: 25px
+			color: #fff
 footer
 	padding: 14px 23px 39px 23px
 	a
@@ -381,7 +367,7 @@ footer
 		align-items: flex-start
 		padding-top: 32px
 	&_wrapper > div
-		width: 50%
+		width: 33%
 		&:nth-child(3)
 			display: flex
 			justify-content: flex-end
